@@ -1,5 +1,5 @@
 """
-Binary search tree algorithm.
+Binary search tree algorithm. recursive version.
 """
 
 
