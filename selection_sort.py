@@ -16,5 +16,25 @@ def selection_sort(alist):
 
 alist = [54, 26, 93, 17, 77, 31, 44, 55, 20, ]
 selection_sort(alist)
-print alist
+# print alist
 
+
+def selection_sort_m(alist):
+    position_element = None
+    for i in xrange(len(alist) + 1):
+        if len(alist[:position_element]):
+            element_max = max(alist[:position_element])
+            position_idx = alist.index(element_max)
+            if position_element is None:
+                position_element = -1
+            alist[position_idx], \
+                alist[position_element] \
+                = alist[position_element], alist[position_idx]
+            position_element -= 1
+    return alist
+
+
+# alist = [10, 2, 4, 9, 6, 5, 7, 12, 3, 1]
+# alist = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 11]
+alist = [54, 26, 93, 17, 77, 31, 44, 55, 20, ]
+print selection_sort_m(alist)
